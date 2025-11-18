@@ -82,9 +82,13 @@ class EspacioController extends Controller
      */
     public function destroy(Espacio $espacio)
     {
-          $espacio->delete();
-
-        return redirect()->route('espacios.index')
-            ->with('success', 'Espacio eliminado correctamente');
+       if ($espacio->reservas()->count() > 0) {
+        return redirect()->back()->with('error', 'No puedes eliminar este espacio porque tiene reservas asociadas borralas y lueog eliminas');
     }
+
+    $espacio->delete();
+
+    return redirect()->route('espacios.index')->with('success', 'Espacio eliminado correctamente');
 }
+    }
+
