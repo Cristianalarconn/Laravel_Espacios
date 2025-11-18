@@ -19,7 +19,7 @@ Este es un sistema de reservas desarrollado con **Laravel**, que incluye:
 ### Clonar el repositorio
 ```bash
 https://github.com/Cristianalarconn/Laravel_Espacios
-cd tu-repositorio
+cd mi proyecto en este caso Lravel_Espacios
 ```
 ### instalar
 ```bash
